@@ -1,0 +1,266 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --pink: #B52184;
+  --purple: #312D64;
+  --light: #F9F4FB;
+}
+
+.sr-only {
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  margin: -1px;
+  padding: 0;
+  white-space: nowrap;
+  border-width: 0;
+  clip: rect(0,0,0,0);
+}
+
+body {  
+  min-width: 43rem;
+}
+
+body, input, textarea, button {
+  font-family: 'Mulish', sans-serif;
+}
+
+
+h1, h2, h3 {  
+  color: var(--pink);
+}
+
+p {
+  color: var(--purple);
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background: #F9F4FB;
+}
+
+header #hero {
+  margin: 0 3.2rem;
+
+}
+
+#hero img {
+  
+  min-width: 364px;
+  width: 100%;
+}
+
+header #title {
+  margin: auto;
+  text-align: center;
+  min-width: 364px;
+}
+
+#title h1 {
+  font-size: 3.2rem;
+  font-weight: 900;
+}
+
+#title p {
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 3.5rem;
+}
+
+#title span img{
+  margin-bottom: 9.3rem;
+}
+
+main {
+  background-color: var(--purple);
+  display: flex;
+  flex-direction: column;
+  
+  gap: 5rem;
+  padding: 5rem 3.9rem 5rem;
+  
+}
+
+
+.card{
+  border-radius: 2.4rem;
+  background-color: #FFF;
+  box-shadow: 0 .4rem 1.6rem 0 rgba(0, 0, 0, 0.25);
+  padding: 2.6rem 6rem 2.6rem 2.6rem;
+  
+}
+
+.card h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-top: 3rem;
+  margin-bottom: 1.1rem;
+}
+
+.card p {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+section{
+  
+  display: flex;
+  flex-direction: column;
+  background: #F9F4FB;
+}
+
+section > div {
+  padding: 7.8rem 4rem 4.3rem;
+  max-width: 76.8rem;
+}
+
+section h2 {
+  font-size: 3.2rem;
+  font-weight: 900;
+  margin-bottom: 4.3rem;
+  
+}
+
+section form {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+
+.input-wrapper {
+  min-width: 24.8rem;
+}
+
+.input-wrapper input,
+.input-wrapper textarea {
+  padding: 1.6rem 1.6rem 1.4rem;
+  border-radius: 1.6rem;
+  border: 1.5px solid var(--purple);
+  width: 100%;
+  line-height: 100%;
+  background: #F9F4FB;
+}
+
+.input-wrapper input {
+  padding-left: 4.8rem;
+  font-size: 1.6rem;
+}
+
+.input-wrapper #name {  
+  background: url(./assets/person.png) no-repeat ;
+  background-position: 12px center;
+}
+
+.input-wrapper #email {  
+  background: url(./assets/at.png) no-repeat;
+  background-position: 12px center;
+}
+
+
+.input-wrapper input::placeholder,
+.input-wrapper textarea::placeholder {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--purple);
+}
+
+button {
+  border-radius: 1.6rem;
+  background: linear-gradient(96deg, #343193 0%, #302C63 99.68%);
+
+  padding: 1.6rem;
+  color: #FFF;
+  width: fit-content;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+  border: none;
+}
+
+section #estrelas {
+  display: none;
+}
+
+footer {
+  background-color: var(--purple);
+}
+
+footer p {
+  color: #FFF;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  padding: 3.2rem;
+}
+
+@media (min-width: 768px) {
+  header {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-bottom: 10rem;
+  }
+
+  #hero img {
+    width: auto;
+  }
+
+  #title {
+    display: flex;
+    gap: 18rem;
+    flex-direction: column;
+    align-items: flex-start;
+    
+  }
+  
+  #title h1 {
+    margin-top: 31rem;
+  }
+
+  #title span img{
+    margin-bottom: 0;
+  }
+
+  main {
+    background-color: var(--purple);
+    flex-direction: row;
+    
+    gap: 5rem;
+    padding: 5rem 3.9rem 5rem;
+    
+  }
+
+  section {
+    
+    display: flex;
+    flex-direction: row;
+  }
+  section > div {
+    width: clamp(32.8rem,100vw - 40%,80rem);
+  }
+
+
+  section #estrelas {
+    display:block;
+  }
+
+  section {
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+
+}
